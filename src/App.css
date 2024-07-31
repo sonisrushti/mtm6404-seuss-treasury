@@ -1,41 +1,112 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #353535;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background-color: #3c6e71;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+nav {
+  margin-bottom: 20px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+nav a {
+  margin: 0 10px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #ffffff;
+  transition: color 0.3s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+nav a:hover {
+  color: #d9d9d9;
 }
 
-.card {
-  padding: 2em;
+.book-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.read-the-docs {
-  color: #888;
+.book-item {
+  margin: 10px;
+  text-align: center;
+  background-color: #284b63;
+  padding: 10px;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.book-item:hover {
+  transform: scale(1.05);
+}
+
+.book-item img {
+  width: 100px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.book-item p {
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: #d9d9d9;
+}
+
+.quotes-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #3c6e71;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+}
+
+.quotes-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.quotes-container li {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  text-align: left;
+  position: relative;
+  padding-left: 35px;
+}
+
+.quotes-container li::before {
+  content: "“";
+  font-size: 2rem;
+  color: #ffffff;
+  position: absolute;
+  left: 0;
+  top: -10px;
+}
+
+.quotes-container li::after {
+  content: "”";
+  font-size: 2rem;
+  color: #ffffff;
+  position: absolute;
+  right: 0;
+  bottom: -10px;
 }

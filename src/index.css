@@ -5,8 +5,8 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: #353535;
+  background-color: #ffffff;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -17,11 +17,11 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #3c6e71;
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: #284b63;
 }
 
 body {
@@ -44,12 +44,12 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #d9d9d9;
   cursor: pointer;
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: #3c6e71;
 }
 button:focus,
 button:focus-visible {
@@ -58,13 +58,114 @@ button:focus-visible {
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    color: #ffffff;
+    background-color: #353535;
   }
   a:hover {
-    color: #747bff;
+    color: #284b63;
   }
   button {
-    background-color: #f9f9f9;
+    background-color: #ffffff;
   }
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+nav {
+  margin-bottom: 20px;
+}
+
+nav a {
+  margin: 0 10px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #3c6e71;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #284b63;
+}
+
+.book-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.book-item {
+  margin: 10px;
+  text-align: center;
+  background-color: #ffffff;
+  padding: 10px;
+  border: 2px solid #3c6e71;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.book-item:hover {
+  transform: scale(1.05);
+  border-color: #284b63;
+}
+
+.book-item img {
+  width: 150px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.book-item p {
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: #353535;
+}
+
+.quotes-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 2px solid #3c6e71;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  color: #353535;
+}
+
+.quotes-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.quotes-container li {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  text-align: left;
+  position: relative;
+  padding-left: 35px;
+}
+
+.quotes-container li::before {
+  content: "“";
+  font-size: 2rem;
+  color: #3c6e71;
+  position: absolute;
+  left: 0;
+  top: -10px;
+}
+
+.quotes-container li::after {
+  content: "”";
+  font-size: 2rem;
+  color: #3c6e71;
+  position: absolute;
+  right: 0;
+  bottom: -10px;
 }
